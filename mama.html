@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HAPPY BIRTHDAY MAMA!!</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </head>
+  <body
+  class="flex justify-center h-screen items-center bg-cover bg-center">
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="mama.mp4" type="video/mp4">
+  </video>
+    
+    <div
+      class="bg-white border px-10 py-8 border-4 border-gray-300 shadow-lg shadow-violet-300 rounded-xl text-center animate__animated animate__backInDown m-7 w-80" id="kartu" style="display: block;">
+      <h1 class="text-2xl font-semibold">​HAPPY BIRTHDAY​</h1>
+      <h1
+        class="text-4xl text-violet-500 font-bold animate__animated animate__pulse animate__infinite">
+        MAMA <3
+      </h1>
+      <button
+        class="p-2 bg-purple-600 text-white rounded mt-5 hover:bg-purple-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
+        onclick="ubahKartu()">
+        CLICK HERE!
+      </button>
+    </div>
+    <div
+      class="bg-white px-10 py-8 border-4 border-gray-300 shadow-lg shadow-blue-300 rounded-xl text-center animate__animated animate__backInDown max-w-md w-full mx-10"
+      id="kartu1" style="display: none;">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+        shapes: ["heart"],
+        colors: ["81CEFA", "4169E1", "B0E0E6", "00FFFF"],
+      };
+
+      confetti({
+        ...defaults,
+        particleCount: 50,
+        scalar: 2,
+      });
+
+      confetti({
+        ...defaults,
+        particleCount: 25,
+        scalar: 3,
+      });
+
+      confetti({
+        ...defaults,
+        particleCount: 10,
+        scalar: 4,
+      });
+
+      function ubahKartu() {
+        document.getElementById("kartu").style.display = "none";
+        document.getElementById("kartu1").style.display = "block";
+
+        document.getElementById("kartu1").innerHTML= `<h1 class="font-semibold wrap animate__animated animate__zoomIn"> 
+          <strong>Happy Birthday MAA!</strong><br> 
+          maaf kalo kado dari uni baru uni kasih sekarang dan template dari punya papa (uni ga ada ide T-T) <br>
+          Semoga dengan bertambahnya umur mama, mama semakin awet muda<br> jarang marah marah xixi <br> dan banyak uang, di beri kesehatan dan perlindungan, serta umur yang panjang
+          </h1>     
+          <button 
+          class="p-2 bg-purple-600 text-white rounded mt-5 hover:bg-purple-900 transition ease-in w-full 
+          animate__animated animate__delay-1s
+          animate__tada" onclick="ubahKartu1()"
+          >
+            NEXTT
+          </button>
+          `;
+      }
+
+      const Kartu = document.getElementById("kartu1");
+
+      function ubahKartu1() {
+        Kartu.innerHTML = `<h1 class="font-semibold text-wrap animate__animated animate_zoomIn"> 
+        Maafin uni jika uni banyak salah, mama baca ini pasti pas uni udah di nala <br> awas kangen uni loh ya maa hehe, uni pasti bakal kangen mama pas uni di nala :c <br> uni mohon doanya ya ma.. <br>mama juga jaga kesehatan loh ya jangan lupa makan!!! <br><strong> SARANGHAEYO MAMA >-<</STRONG> </h1>     
+        <h2 class="mt-3 animate__animated animate__fateIn">
+          - From: Uni -
+        </h2> 
+        <button 
+        class="p-2 bg-purple-600 text-white rounded mt-5 hover:bg-purple-900 transition ease-in w-full 
+        animate__animated animate__delay-1s
+        animate__tada" onclick="ubahKartu2()"
+        >
+          next to last page
+        </button>
+        `;
+      }
+
+      function ubahKartu2() {
+        Kartu.innerHTML = `<h1 class="font-semibold text-wrap animate__animated animate_zoomIn"> 
+        <video autoplay muted loop playsinline class="w-100 h-auto rounded">
+          <source src="0710.mp4" type="video/mp4">
+        </video>
+        </h1>     
+        <h2 class="mt-3 animate__animated animate__fateIn">
+          - >-< -
+        </h2> 
+        <button 
+        class="p-2 bg-purple-600 text-white rounded mt-5 hover:bg-purple-900 transition ease-in w-full font-bold
+        animate__animated animate__delay-1s
+        animate__tada" onclick="refresh()"
+        >
+          SEE YA IN 3 MONTHS MAMA!! 
+        </button>
+        `;
+      }
+      
+      function refresh() {
+        document.getElementById("kartu1").style.display = "none";
+
+          setTimeout(function() {
+            location.reload();
+          });
+        }     
+    </script>
+  </body>
+</html>
